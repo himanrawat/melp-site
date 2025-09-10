@@ -1,14 +1,14 @@
 const FolderCard = ({ shortName, userName, userMsg }) => {
 	return (
-		<div className="flex items-center gap-4 bg-white dark:bg-neutral-800 w-full p-4 rounded-lg shadow-lg dark:shadow-neutral-900/40 border border-gray-100 dark:border-neutral-700 transition-colors duration-300">
-			<div className="rounded-full bg-primary-300 dark:bg-primary-600 h-14 w-14 flex justify-center items-center">
+		<div className="flex items-center gap-4 bg-white  w-full p-4 rounded-lg shadow-lg border border-gray-100 transition-colors duration-300">
+			<div className="rounded-full bg-primary-300 h-14 w-14 flex justify-center items-center">
 				<p className="text-white font-bold text-center text-2xl ">
 					{shortName}
 				</p>
 			</div>
 			<div className="flex flex-col">
-				<p className="font-medium text-xl text-gray-800 dark:text-gray-200">{userName}</p>
-				<p className="font-normal text-sm text-gray-600 dark:text-gray-400">{userMsg}</p>
+				<p className="font-medium text-xl text-gray-800 ">{userName}</p>
+				<p className="font-normal text-sm text-gray-600 ">{userMsg}</p>
 			</div>
 			<div>
 				<svg
