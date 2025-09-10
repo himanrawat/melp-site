@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Check, AlertTriangle, X, Info } from "lucide-react";
-import { ModeToggle } from "@/components/modeToggle";
+// import { ModeToggle } from "@/components/modeToggle";
 
 export default function DesignSystemShowcase() {
 	const [activeTab, setActiveTab] = useState("colors");
@@ -91,7 +91,7 @@ export default function DesignSystemShowcase() {
 								oklch(63.07% 0.211 28.41)
 							</span>
 						</div>
-						<ModeToggle />
+						{/* <ModeToggle /> */}
 					</div>
 				</div>
 			</header>

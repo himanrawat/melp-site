@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -152,42 +150,6 @@
   --sidebar-ring: var(--ring);
 }
 
-.dark {
-  /* Component Color Tokens - Dark Mode */
-  --background: var(--neutral-900);
-  --foreground: var(--neutral-50);
-  --card: var(--neutral-800);
-  --card-foreground: var(--neutral-50);
-  --popover: var(--neutral-800);
-  --popover-foreground: var(--neutral-50);
-  --primary: var(--primary-400);
-  --primary-foreground: var(--neutral-900);
-  --secondary: var(--neutral-800);
-  --secondary-foreground: var(--neutral-50);
-  --muted: var(--neutral-800);
-  --muted-foreground: var(--neutral-400);
-  --accent: var(--primary-900);
-  --accent-foreground: var(--primary-100);
-  --destructive: var(--error-400);
-  --destructive-foreground: var(--neutral-900);
-  --border: var(--neutral-700);
-  --input: var(--neutral-700);
-  --ring: var(--primary-400);
-  --chart-1: var(--primary-400);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: var(--neutral-800);
-  --sidebar-foreground: var(--neutral-50);
-  --sidebar-primary: var(--primary-400);
-  --sidebar-primary-foreground: var(--neutral-900);
-  --sidebar-accent: var(--neutral-700);
-  --sidebar-accent-foreground: var(--neutral-50);
-  --sidebar-border: var(--neutral-700);
-  --sidebar-ring: var(--primary-400);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -321,12 +283,6 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
-  .glass-dark {
-    backdrop-filter: blur(16px) saturate(180%);
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
   .glass-strong {
     backdrop-filter: blur(20px) saturate(200%);
     background: rgba(255, 255, 255, 0.15);
@@ -341,15 +297,6 @@
       rgba(255, 255, 255, 0.05) 100%
     );
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .dark .navbar-glass {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.05) 100%
-    );
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   /* Gradient Utilities */
@@ -534,28 +481,10 @@
   display: none !important;
 }
 
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-thumb {
-  background: rgba(238, 65, 54, 0.15);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: rgba(238, 65, 54, 0.3);
-  box-shadow: 0 0 4px rgba(238, 65, 54, 0.2);
-}
-
-.dark ::-webkit-scrollbar-thumb:active {
-  background: rgba(238, 65, 54, 0.5);
-}
-
 /* Firefox scrollbar support */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(238, 65, 54, 0.2) transparent;
-}
-
-.dark * {
-  scrollbar-color: rgba(238, 65, 54, 0.15) transparent;
 }
 
 /* Enhanced scrollbar for specific containers */
