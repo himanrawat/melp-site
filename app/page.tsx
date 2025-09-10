@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import folder from "@/public/folder.svg";
 import paperclip from "@/public/paper_clip.webp";
 import FolderCard from "@/components/ui/FolderCard";
 import { Button } from "@/components/ui/button";
 import { Video, ArrowRight } from "lucide-react";
-import { animate, stagger } from "motion";
+import { animate } from "motion";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -33,8 +32,8 @@ export default function Home() {
 			".floating-meeting"
 		) as HTMLElement;
 
-		let folderStart = Date.now();
-		let meetingStart = Date.now() + 500; // 0.5s delay
+		const folderStart = Date.now();
+		const meetingStart = Date.now() + 500; // 0.5s delay
 
 		const animateFloating = () => {
 			const now = Date.now();
