@@ -2,7 +2,6 @@
 
 import React from "react";
 import { cn } from "@/lib/utils";
-import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Image from "next/image";
@@ -12,13 +11,9 @@ import {
 	Video,
 	Calendar,
 	Languages,
-	MessageSquare,
 	FileText,
 	Folder,
 	Share2,
-	Download,
-	Upload,
-	Search,
 } from "lucide-react";
 
 export default function FeaturesSectionDemo() {
@@ -414,7 +409,7 @@ export const SkeletonTwo = () => {
 						</span>
 					</div>
 					<p className="text-gray-300 text-xs">
-						"3 action items identified • Next: Sprint planning discussion"
+						&quot;3 action items identified • Next: Sprint planning discussion&quot;
 					</p>
 				</div>
 			</div>

@@ -15,12 +15,10 @@ import folder from "@/public/folder.svg";
 import paperclip from "@/public/paper_clip.webp";
 import FolderCard from "@/components/ui/FolderCard";
 
-import FeatureSection from "@/components/sections/FeatureSection";
 import FeaturesSectionDemo from "@/components/ui/features-section-demo-3";
 import { Button } from "@/components/ui/button";
 import { Video, ArrowRight } from "lucide-react";
 import { motion, useAnimation } from "motion/react";
-import { useEffect } from "react";
 
 // Floating animation component
 const FloatingElement = ({
@@ -436,7 +434,6 @@ export default function Home() {
 				</div>
 			</div>
 
-			{/* <FeatureSection /> */}
 			<FeaturesSectionDemo />
 		</>
 	);
