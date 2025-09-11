@@ -436,7 +436,7 @@ export default function Home() {
 				</div>
 			</div>
 
-			<FeatureSection />
+			{/* <FeatureSection /> */}
 			<FeaturesSectionDemo />
 		</>
 	);
