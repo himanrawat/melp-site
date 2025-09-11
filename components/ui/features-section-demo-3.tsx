@@ -409,7 +409,8 @@ export const SkeletonTwo = () => {
 						</span>
 					</div>
 					<p className="text-gray-300 text-xs">
-						&quot;3 action items identified • Next: Sprint planning discussion&quot;
+						&quot;3 action items identified • Next: Sprint planning
+						discussion&quot;
 					</p>
 				</div>
 			</div>
