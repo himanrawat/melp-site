@@ -15,7 +15,7 @@ import folder from "@/public/folder.svg";
 import paperclip from "@/public/paper_clip.webp";
 import FolderCard from "@/components/ui/FolderCard";
 
-import FeaturesSectionDemo from "@/components/ui/features-section-demo-3";
+import FeaturesSection from "@/components/ui/features-section";
 import { Button } from "@/components/ui/button";
 import { Video, ArrowRight } from "lucide-react";
 import { motion, useAnimation } from "motion/react";
@@ -434,7 +434,7 @@ export default function Home() {
 				</div>
 			</div>
 
-			<FeaturesSectionDemo />
+			<FeaturesSection />
 		</>
 	);
 }
