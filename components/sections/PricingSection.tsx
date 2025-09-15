@@ -101,7 +101,6 @@ const PricingCard = ({
 	index: number;
 	isYearly: boolean;
 }) => {
-	const currentPrice = isYearly ? plan.price.yearly : plan.price.monthly;
 	const monthlyPrice = isYearly ? plan.price.yearly / 12 : plan.price.monthly;
 
 	return (

@@ -20,7 +20,6 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import StatsSection from "@/components/sections/StatsSection";
 import PricingSection from "@/components/sections/PricingSection";
 import CTASection from "@/components/sections/CTASection";
-import Footer from "@/components/sections/Footer";
 import { Button } from "@/components/ui/button";
 import { Video, ArrowRight } from "lucide-react";
 import { motion, useAnimation } from "motion/react";

@@ -2,12 +2,10 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Twitter, Linkedin, Github, Instagram } from "lucide-react";
 // import FloatingElement from "@/ui/FloatingElement";
 import Image from "next/image";
 import folder from "@/public/folder.svg";
 import paperclip from "@/public/paper_clip.webp";
-import FolderCard from "@/components/ui/FolderCard";
 import logo from "@/public/logo.svg";
 import Link from "next/link";
 import SocialMedia from "@/components/ui/SocialMedia";
