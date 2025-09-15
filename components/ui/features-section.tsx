@@ -41,7 +41,7 @@ export default function FeaturesSection() {
 	];
 
 	return (
-		<div className="relative z-20 py-16 lg:py-32 max-w-[1920px] mx-auto">
+		<div className="relative z-20 py-16 lg:py-32 max-w-[1920px] mx-auto  px-6 sm:px-8 lg:px-12">
 			<div className="px-8">
 				<div className="bg-primary-100 w-fit p-3 rounded-xl mb-8 flex items-center gap-3 mx-auto border border-primary-200">
 					<div className="w-5 h-5 rounded-full border-2 border-primary-500 bg-transparent flex items-center justify-center">
@@ -53,11 +53,9 @@ export default function FeaturesSection() {
 				</div>
 
 				<h4 className="text-4xl lg:text-6xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-neutral-900 mb-6">
-					<span className="bg-gradient-to-r from-neutral-900 via-primary-800 to-neutral-900 bg-clip-text text-transparent">
-						Packed with powerful
-					</span>
+					<span className="text-neutral-900">Packed with powerful</span>
 					<br />
-					<span className="bg-gradient-to-r from-primary-600 to-primary-500">
+					<span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
 						collaboration tools
 					</span>
 				</h4>

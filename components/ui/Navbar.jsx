@@ -365,7 +365,7 @@ const Navbar = () => {
 						>
 							<Button 
 								asChild
-								className={`relative overflow-hidden bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-500 group ${
+								className={`relative overflow-hidden bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-500 group ${
 									scrolled ? "h-8 px-3 text-sm shadow-md" : "h-10 px-4 shadow-primary/20"
 								}`}
 							>
@@ -502,7 +502,7 @@ const Navbar = () => {
 											initial="hidden"
 											animate="visible"
 										>
-											<Button className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg" asChild>
+											<Button className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 shadow-lg" asChild>
 												<Link href="/signup" onClick={() => setIsOpen(false)}>
 													Get Started
 												</Link>

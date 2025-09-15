@@ -16,9 +16,15 @@ import paperclip from "@/public/paper_clip.webp";
 import FolderCard from "@/components/ui/FolderCard";
 
 import FeaturesSection from "@/components/ui/features-section";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import StatsSection from "@/components/sections/StatsSection";
+import PricingSection from "@/components/sections/PricingSection";
+import CTASection from "@/components/sections/CTASection";
+import Footer from "@/components/sections/Footer";
 import { Button } from "@/components/ui/button";
 import { Video, ArrowRight } from "lucide-react";
 import { motion, useAnimation } from "motion/react";
+import Footer2 from "@/components/sections/Footer2";
 
 // Floating animation component
 const FloatingElement = ({
@@ -185,7 +191,7 @@ const InteractiveButton = ({
 export default function Home() {
 	return (
 		<>
-			<div className="p-4 w-full rounded-4xl border-2 border-gray-200 bg-[radial-gradient(circle,rgb(230,230,230)_1px,transparent_1px)] bg-[length:10px_10px] overflow-hidden pt-20 bg-white transition-colors duration-300 relative">
+			<div className="p-4 w-full rounded-4xl border-2 border-gray-200 bg-[radial-gradient(circle,rgb(230,230,230)_1px,transparent_1px)] bg-[length:10px_10px] overflow-hidden pt-20 bg-white transition-colors duration-300 relative max-w-[1920px] mx-auto px-6 sm:px-8 lg:px-12">
 				{/* Animated Feature Icons - Scattered around hero section */}
 
 				{/* Video Call Icon - Top Left */}
@@ -276,7 +282,7 @@ export default function Home() {
 								transition={{ duration: 0.3, delay: 0.5 }}
 							/>
 						</div>
-						<p className="text-gray-800">
+						<p className="text-neutral-800">
 							New! AI that writes, polishes, and perfects for you
 						</p>
 					</motion.div>
@@ -435,6 +441,12 @@ export default function Home() {
 			</div>
 
 			<FeaturesSection />
+			<TestimonialsSection />
+			<StatsSection />
+			<PricingSection />
+			<CTASection />
+			{/* <Footer /> */}
+			<Footer2 />
 		</>
 	);
 }
