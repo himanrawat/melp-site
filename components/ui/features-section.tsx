@@ -41,7 +41,7 @@ export default function FeaturesSection() {
 	];
 
 	return (
-		<div className="relative z-20 py-16 lg:py-32 max-w-7xl mx-auto">
+		<div className="relative z-20 py-16 lg:py-32 max-w-[1920px] mx-auto">
 			<div className="px-8">
 				<div className="bg-primary-100 w-fit p-3 rounded-xl mb-8 flex items-center gap-3 mx-auto border border-primary-200">
 					<div className="w-5 h-5 rounded-full border-2 border-primary-500 bg-transparent flex items-center justify-center">
