@@ -9,9 +9,9 @@ import Image from "next/image";
 const CTASection = () => {
 	return (
 		<div className="relative py-20 lg:py-32">
-			{/* Background Gradient - More solid */}
-			<div className="absolute inset-0 bg-primary-500" />
-			<div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 via-primary-500/95 to-primary-700/90" />
+			{/* Background - Neutral gradient */}
+			<div className="absolute inset-0 bg-neutral-900" />
+			<div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900" />
 
 			{/* Background Pattern */}
 			<div className="absolute inset-0 opacity-10">
@@ -90,9 +90,9 @@ const CTASection = () => {
 								whileInView={{ scale: 1 }}
 								transition={{ duration: 0.6, delay: 0.2 }}
 								viewport={{ once: true }}
-								className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+								className="w-20 h-20 bg-primary-500/20 border border-primary-500/30 rounded-2xl flex items-center justify-center backdrop-blur-sm"
 							>
-								<Sparkles className="w-10 h-10 text-white" />
+								<Sparkles className="w-10 h-10 text-primary-500" />
 							</motion.div>
 						</div>
 
@@ -135,7 +135,7 @@ const CTASection = () => {
 							>
 								<Button
 									size="lg"
-									className="bg-white text-primary-600 hover:bg-primary-50 hover:text-primary-700 px-8 py-4 text-lg font-semibold shadow-xl"
+									className="bg-primary-500 text-white hover:bg-primary-600 hover:text-white px-8 py-4 text-lg font-semibold shadow-xl"
 								>
 									<div className="flex items-center gap-3">
 										<span>Start Free Trial</span>
@@ -156,7 +156,7 @@ const CTASection = () => {
 								<Button
 									variant="outline"
 									size="lg"
-									className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 text-lg font-semibold backdrop-blur-sm"
+									className="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 text-lg font-semibold backdrop-blur-sm"
 								>
 									Watch Demo
 								</Button>
@@ -210,7 +210,7 @@ const CTASection = () => {
 											transition={{ duration: 0.3, delay: 0.6 + i * 0.05 }}
 											viewport={{ once: true }}
 										>
-											<Sparkles className="w-4 h-4 text-yellow-300 fill-current drop-shadow-sm" />
+											<Sparkles className="w-4 h-4 text-yellow-400 fill-current drop-shadow-sm" />
 										</motion.div>
 									))}
 								</div>
