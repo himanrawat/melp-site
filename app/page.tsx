@@ -22,7 +22,9 @@ export default function Home() {
 			</div>
 			<CTASection />
 			{/* <Footer /> */}
-			<Footer2 />
+			<div className="px-6 sm:px-8 lg:px-12">
+				<Footer2 />
+			</div>
 		</>
 	);
 }

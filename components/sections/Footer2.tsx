@@ -50,7 +50,7 @@ const FloatingElement = ({
 };
 const Footer2 = () => {
 	return (
-		<footer className="mt-12 p-4 w-full rounded-4xl border-2 border-gray-200 bg-[radial-gradient(circle,rgb(230,230,230)_1px,transparent_1px)] bg-[length:10px_10px] overflow-hidden pt-20 bg-white transition-colors duration-300 relative max-w-[1920px] mx-auto px-6 sm:px-8 lg:px-12">
+		<footer className="mt-12 p-4 w-full rounded-4xl border-2 border-gray-200 bg-[radial-gradient(circle,rgb(230,230,230)_1px,transparent_1px)] bg-[length:10px_10px] pt-20 bg-neutral-50 transition-colors duration-300 relative max-w-[1920px] mx-auto px-6 sm:px-8 lg:px-12">
 			{/* Main Footer Content */}
 			<div className="flex flex-col lg:flex-row justify-between items-start mb-12">
 				{/* Logo Section */}

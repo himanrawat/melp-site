@@ -8,30 +8,37 @@ import Image from "next/image";
 
 const CTASection = () => {
 	return (
-		<div className="relative py-20 lg:py-32">
-			{/* Background - Neutral gradient */}
-			<div className="absolute inset-0 bg-neutral-900" />
-			<div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900" />
-
-			{/* Background Pattern */}
-			<div className="absolute inset-0 opacity-10">
-				<div
-					className="w-full h-full bg-white bg-repeat"
-					style={{
-						backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-					}}
-				></div>
-			</div>
-
-			{/* Floating Elements */}
-			<div className="absolute top-20 left-10 opacity-20">
+		<div
+			className="relative py-20 lg:py-32 overflow-hidden bg-neutral-50"
+			style={{
+				background: `
+					radial-gradient(ellipse 250% 300% at 50% 50%, 
+						rgb(23, 23, 23) 0%,         /* neutral-900 center - darkest */
+						rgb(38, 38, 38) 8%,         /* neutral-800 */
+						rgb(64, 64, 64) 15%,        /* neutral-700 */
+						rgb(82, 82, 82) 22%,        /* neutral-600 */
+						rgb(115, 115, 115) 28%,     /* neutral-500 */
+						rgb(163, 163, 163) 35%,     /* neutral-400 */
+						rgb(212, 212, 212) 42%,     /* neutral-300 */
+						rgb(229, 229, 229) 50%,     /* neutral-200 */
+						rgb(245, 245, 245) 58%,     /* neutral-100 */
+						rgb(250, 250, 250) 70%,     /* neutral-50 */
+						rgb(250, 250, 250) 85%,     /* neutral-50 */
+						rgb(250, 250, 250) 100%     /* neutral-50 at edges */
+					)
+				`,
+			}}
+		>
+			{/* Floating Elements - Smoother animations */}
+			<div className="absolute top-20 left-10 opacity-15">
 				<motion.div
 					animate={{
 						y: [0, -20, 0],
-						rotate: [0, 5, 0],
+						rotate: [0, 3, 0],
+						scale: [1, 1.05, 1],
 					}}
 					transition={{
-						duration: 6,
+						duration: 8,
 						repeat: Infinity,
 						ease: "easeInOut",
 					}}
@@ -40,34 +47,36 @@ const CTASection = () => {
 				</motion.div>
 			</div>
 
-			<div className="absolute top-32 right-16 opacity-20">
+			<div className="absolute top-32 right-16 opacity-15">
 				<motion.div
 					animate={{
 						y: [0, 15, 0],
-						rotate: [0, -5, 0],
+						rotate: [0, -3, 0],
+						scale: [1, 1.1, 1],
 					}}
 					transition={{
-						duration: 8,
+						duration: 10,
 						repeat: Infinity,
 						ease: "easeInOut",
-						delay: 1,
+						delay: 1.5,
 					}}
 				>
 					<Zap className="w-12 h-12 text-white" />
 				</motion.div>
 			</div>
 
-			<div className="absolute bottom-20 left-20 opacity-20">
+			<div className="absolute bottom-20 left-20 opacity-15">
 				<motion.div
 					animate={{
 						y: [0, -25, 0],
-						x: [0, 10, 0],
+						x: [0, 8, 0],
+						rotate: [0, 5, 0],
 					}}
 					transition={{
-						duration: 7,
+						duration: 9,
 						repeat: Infinity,
 						ease: "easeInOut",
-						delay: 2,
+						delay: 3,
 					}}
 				>
 					<Sparkles className="w-14 h-14 text-white" />
@@ -83,37 +92,77 @@ const CTASection = () => {
 						transition={{ duration: 0.8 }}
 						viewport={{ once: true }}
 					>
-						{/* Sparkles Icon */}
+						{/* Sparkles Icon - Enhanced animation */}
 						<div className="flex justify-center mb-8">
 							<motion.div
-								initial={{ scale: 0 }}
-								whileInView={{ scale: 1 }}
-								transition={{ duration: 0.6, delay: 0.2 }}
+								initial={{ scale: 0, rotate: -180 }}
+								whileInView={{ scale: 1, rotate: 0 }}
+								transition={{
+									duration: 0.8,
+									delay: 0.2,
+									type: "spring",
+									stiffness: 100,
+									damping: 10,
+								}}
 								viewport={{ once: true }}
 								className="w-20 h-20 bg-primary-500/20 border border-primary-500/30 rounded-2xl flex items-center justify-center backdrop-blur-sm"
 							>
-								<Sparkles className="w-10 h-10 text-primary-500" />
+								<motion.div
+									animate={{ rotate: [0, 360] }}
+									transition={{
+										duration: 20,
+										repeat: Infinity,
+										ease: "linear",
+									}}
+								>
+									<Sparkles className="w-10 h-10 text-primary-500" />
+								</motion.div>
 							</motion.div>
 						</div>
 
-						{/* Headline */}
+						{/* Headline - Staggered animation */}
 						<motion.h2
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8, delay: 0.1 }}
+							transition={{
+								duration: 1,
+								delay: 0.3,
+								type: "spring",
+								stiffness: 80,
+								damping: 20,
+							}}
 							viewport={{ once: true }}
 							className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
 						>
-							Ready to transform your
+							<motion.span
+								initial={{ opacity: 0, x: -20 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.6, delay: 0.4 }}
+								viewport={{ once: true }}
+							>
+								Ready to transform your
+							</motion.span>
 							<br />
-							team collaboration?
+							<motion.span
+								initial={{ opacity: 0, x: 20 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.6, delay: 0.6 }}
+								viewport={{ once: true }}
+							>
+								team collaboration?
+							</motion.span>
 						</motion.h2>
 
-						{/* Subtitle */}
+						{/* Subtitle - Spring animation */}
 						<motion.p
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: 0.2 }}
+							transition={{
+								duration: 0.8,
+								delay: 0.8,
+								type: "spring",
+								stiffness: 60,
+							}}
 							viewport={{ once: true }}
 							className="text-xl lg:text-2xl text-white mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-md"
 						>
@@ -121,21 +170,31 @@ const CTASection = () => {
 							communicate clearer, and achieve more together.
 						</motion.p>
 
-						{/* Buttons */}
+						{/* Buttons - Enhanced interactions */}
 						<motion.div
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8, delay: 0.3 }}
+							transition={{
+								duration: 0.8,
+								delay: 1,
+								type: "spring",
+								stiffness: 80,
+							}}
 							viewport={{ once: true }}
 							className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
 						>
 							<motion.div
-								whileHover={{ scale: 1.05 }}
+								whileHover={{
+									scale: 1.05,
+									y: -2,
+									boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+								}}
 								whileTap={{ scale: 0.95 }}
+								transition={{ type: "spring", stiffness: 300, damping: 20 }}
 							>
 								<Button
 									size="lg"
-									className="bg-primary-500 text-white hover:bg-primary-600 hover:text-white px-8 py-4 text-lg font-semibold shadow-xl"
+									className="bg-primary-500 text-white hover:bg-primary-600 hover:text-white px-8 py-4 text-lg font-semibold shadow-xl transition-all duration-300"
 								>
 									<div className="flex items-center gap-3">
 										<span>Start Free Trial</span>
@@ -150,24 +209,33 @@ const CTASection = () => {
 							</motion.div>
 
 							<motion.div
-								whileHover={{ scale: 1.05 }}
+								whileHover={{
+									scale: 1.05,
+									y: -2,
+								}}
 								whileTap={{ scale: 0.95 }}
+								transition={{ type: "spring", stiffness: 300, damping: 20 }}
 							>
 								<Button
 									variant="outline"
 									size="lg"
-									className="border-2 border-white text-white hover:bg-white hover:text-neutral-900 px-8 py-4 text-lg font-semibold backdrop-blur-sm"
+									className="border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-4 text-lg font-semibold backdrop-blur-sm transition-all duration-300"
 								>
 									Watch Demo
 								</Button>
 							</motion.div>
 						</motion.div>
 
-						{/* Trust Indicators */}
+						{/* Trust Indicators - Staggered entrance */}
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: 0.4 }}
+							transition={{
+								duration: 0.6,
+								delay: 1.2,
+								type: "spring",
+								stiffness: 80,
+							}}
 							viewport={{ once: true }}
 							className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white"
 						>
@@ -179,7 +247,12 @@ const CTASection = () => {
 												key={index}
 												initial={{ scale: 0 }}
 												whileInView={{ scale: 1 }}
-												transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+												transition={{
+													duration: 0.4,
+													delay: 1.3 + index * 0.1,
+													type: "spring",
+													stiffness: 200,
+												}}
 												viewport={{ once: true }}
 											>
 												<Image
@@ -205,9 +278,14 @@ const CTASection = () => {
 									{[...Array(5)].map((_, i) => (
 										<motion.div
 											key={i}
-											initial={{ scale: 0 }}
-											whileInView={{ scale: 1 }}
-											transition={{ duration: 0.3, delay: 0.6 + i * 0.05 }}
+											initial={{ scale: 0, rotate: -180 }}
+											whileInView={{ scale: 1, rotate: 0 }}
+											transition={{
+												duration: 0.3,
+												delay: 1.4 + i * 0.05,
+												type: "spring",
+												stiffness: 300,
+											}}
 											viewport={{ once: true }}
 										>
 											<Sparkles className="w-4 h-4 text-yellow-400 fill-current drop-shadow-sm" />
@@ -227,21 +305,6 @@ const CTASection = () => {
 						</motion.div>
 					</motion.div>
 				</div>
-			</div>
-
-			{/* Bottom Wave */}
-			<div className="absolute bottom-0 left-0 right-0">
-				<svg
-					viewBox="0 0 1200 120"
-					preserveAspectRatio="none"
-					className="w-full h-12 lg:h-20"
-				>
-					<path
-						d="M0,60 C150,100 350,0 600,60 C850,120 1050,20 1200,60 L1200,120 L0,120 Z"
-						fill="white"
-						opacity="0.1"
-					/>
-				</svg>
 			</div>
 		</div>
 	);
