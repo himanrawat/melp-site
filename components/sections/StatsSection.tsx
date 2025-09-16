@@ -113,7 +113,7 @@ const StatsSection = () => {
 			{/* Background Decoration */}
 			<div className="absolute inset-0">
 				<div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full blur-3xl opacity-20" />
-				<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-200 rounded-full blur-3xl opacity-20" />
+				<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-200 rounded-full blur-3xl opacity-20 z-10" />
 			</div>
 
 			<div className="max-w-[1920px] mx-auto relative z-10">
