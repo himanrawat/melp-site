@@ -176,7 +176,7 @@ const StatsSection = () => {
 					viewport={{ once: true }}
 					className="text-center mt-16"
 				>
-					<div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white p-8 rounded-3xl shadow-2xl shadow-primary-500/25 border-2 border-primary-400">
+					<div className="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white p-8 rounded-3xl shadow-2xl shadow-neutral-900/25 border-2 border-neutral-700">
 						<h3 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
 							Ready to join the revolution?
 						</h3>
@@ -186,7 +186,7 @@ const StatsSection = () => {
 						<motion.button
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
-							className="bg-white text-primary-600 px-8 py-3 rounded-xl font-semibold hover:bg-primary-50 transition-all duration-300 shadow-lg border border-primary-200"
+							className="bg-primary-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-primary-600 transition-all duration-300 shadow-lg"
 						>
 							Get Started Free
 						</motion.button>
