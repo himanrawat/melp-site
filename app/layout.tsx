@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
+import Footer2 from "@/components/sections/Footer2";
+import { Container } from "@/components/ui/container";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -31,6 +33,9 @@ export default function RootLayout({
 			>
 				<Navbar />
 				<main className="mt-18 lg:mt-32 overflow-hidden">{children}</main>
+				<Container>
+					<Footer2 />
+				</Container>
 			</body>
 		</html>
 	);

@@ -622,6 +622,16 @@ html {
   display: none;
 }
 
+/* Scrollbar hide utility - hides scrollbar but keeps scrolling functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
 /* Utility class for custom scrollbar */
 .scrollbar-primary {
   scrollbar-width: thin;
