@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Star, Quote } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/old-components/ui/badge";
 import Image from "next/image";
 
 interface Testimonial {

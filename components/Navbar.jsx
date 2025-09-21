@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "./button";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -72,15 +72,15 @@ const Navbar = () => {
 		if (scrolled) {
 			return "h-14 lg:h-16"; // Smaller when scrolled
 		}
-		return "h-18 lg:h-24"; // Larger when at top
+		return "h-18"; // Larger when at top
 	};
 
-	const getLogoSize = () => {
-		if (scrolled) {
-			return "text-lg"; // Smaller logo when scrolled
-		}
-		return "text-xl lg:text-2xl"; // Larger logo when at top
-	};
+	// const getLogoSize = () => {
+	// 	if (scrolled) {
+	// 		return "text-lg"; // Smaller logo when scrolled
+	// 	}
+	// 	return "text-xl lg:text-2xl"; // Larger logo when at top
+	// };
 
 	const getPadding = () => {
 		if (scrolled) {
@@ -90,7 +90,7 @@ const Navbar = () => {
 	};
 
 	const navVariants = {
-		hidden: { opacity: 0, y: -20 },
+		hidden: { opacity: 0, y: 20 },
 		visible: {
 			opacity: 1,
 			y: 0,
@@ -145,19 +145,19 @@ const Navbar = () => {
 
 	return (
 		<div className={`fixed top-0 w-full z-50 transition-all duration-700 ease-in-out ${
-			scrolled ? "px-4 sm:px-6 lg:px-8 pt-2" : "px-6 sm:px-8 lg:px-12 pt-4"
+			scrolled ? "px-4 sm:px-6 lg:px-8 pt-2" : ""
 		}`}>
 			<motion.nav
 				initial="hidden"
 				animate="visible"
 				variants={navVariants}
-				className={`w-full transition-all duration-700 ease-in-out rounded-2xl ${
+				className={`w-full transition-all duration-700 ease-in-out  ${
 					scrolled
-						? "bg-background/80 backdrop-blur-xl border border-border/40 shadow-xl shadow-black/10"
-						: "bg-background/30 backdrop-blur-lg border border-border/20"
+						? "rounded-2xl"
+						: ""
 				}`}
 				style={{
-					backdropFilter: scrolled ? "blur(24px) saturate(180%)" : "blur(16px) saturate(120%)",
+					backdropFilter: scrolled ? "" : "blur(16px) saturate(120%)",
 					background: scrolled 
 						? "rgba(255, 255, 255, 0.85)" 
 						: "rgba(255, 255, 255, 0.15)",
@@ -168,7 +168,7 @@ const Navbar = () => {
 					className={`absolute inset-0 rounded-2xl transition-all duration-700 ${
 						scrolled 
 							? "bg-gradient-to-r from-background/70 via-background/50 to-background/70" 
-							: "bg-gradient-to-r from-background/30 via-background/20 to-background/30"
+							: ""
 					}`}
 				/>
 				
