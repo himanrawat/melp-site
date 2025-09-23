@@ -15,12 +15,6 @@ import {
 	Bell,
 	Search,
 	Plus,
-	MoreHorizontal,
-	Phone,
-	Mic,
-	MicOff,
-	VideoOff,
-	Share,
 	Info,
 	Maximize2,
 } from "lucide-react";
@@ -104,7 +98,7 @@ const ApplicationPreviewSection = () => {
 		},
 	];
 
-	const HotspotModal = ({ hotspot }: { hotspot: any }) => (
+	const HotspotModal = ({ hotspot }: { hotspot: (typeof hotspots)[0] }) => (
 		<motion.div
 			initial={{ opacity: 0, scale: 0.9 }}
 			animate={{ opacity: 1, scale: 1 }}
@@ -373,8 +367,8 @@ const ApplicationPreviewSection = () => {
 					</h2>
 
 					<p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-						Take a detailed look at MELP's interface. Click on the hotspots to
-						discover how each feature enhances your team's productivity.
+						Take a detailed look at MELP&apos;s interface. Click on the hotspots
+						to discover how each feature enhances your team&apos;s productivity.
 					</p>
 				</motion.div>
 
@@ -444,7 +438,7 @@ const ApplicationPreviewSection = () => {
 			<AnimatePresence>
 				{selectedHotspot && (
 					<HotspotModal
-						hotspot={hotspots.find((h) => h.id === selectedHotspot)}
+						hotspot={hotspots.find((h) => h.id === selectedHotspot)!}
 					/>
 				)}
 			</AnimatePresence>

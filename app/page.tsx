@@ -8,7 +8,6 @@ import StatsSection from "@/components/sections/StatsSection";
 import ComparisonSection from "@/components/sections/ComparisonSection";
 import PricingSection from "@/components/sections/PricingSection";
 import CTASection from "@/components/sections/CTASection";
-import Footer from "@/components/sections/Footer";
 import { Container } from "@/components/ui/container";
 
 export default function Home() {

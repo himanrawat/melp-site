@@ -8,7 +8,6 @@ import {
 	ArrowRight,
 	Play,
 	Sparkles,
-	CheckCircle,
 	Clock,
 	Users,
 	Zap,

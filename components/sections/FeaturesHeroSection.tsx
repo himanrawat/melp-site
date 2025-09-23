@@ -24,7 +24,7 @@ const FeatureIcon = ({
 	className = "",
 	onClick,
 }: {
-	icon: any;
+	icon: React.ElementType;
 	label: string;
 	delay?: number;
 	className?: string;
@@ -295,7 +295,7 @@ const LivePreview = () => {
 };
 
 const FeaturesHeroSection = () => {
-	const [isPlaying, setIsPlaying] = useState(false);
+	const [_isPlaying, setIsPlaying] = useState(false);
 
 	const handleWatchDemo = () => {
 		setIsPlaying(true);

@@ -6,7 +6,6 @@ import {
 	CheckCircle,
 	X,
 	Zap,
-	Settings,
 	DollarSign,
 	Wrench,
 	Download,

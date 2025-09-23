@@ -12,9 +12,7 @@ import {
 	Video,
 	MessageSquare,
 	Brain,
-	FileText,
 	Calendar,
-	Settings,
 	Phone,
 } from "lucide-react";
 
@@ -196,7 +194,9 @@ const InteractiveDemoSection = () => {
 												<div className="bg-white rounded-xl p-4 shadow-sm">
 													<div className="flex items-center gap-3 mb-3">
 														<Calendar className="w-5 h-5 text-success-500" />
-														<h3 className="font-semibold">Today's Schedule</h3>
+														<h3 className="font-semibold">
+															Today&apos;s Schedule
+														</h3>
 													</div>
 													<div className="text-sm text-neutral-600">
 														<p>3 meetings • 2 deadlines</p>
