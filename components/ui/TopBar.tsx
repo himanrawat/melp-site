@@ -26,7 +26,7 @@ const TopBar = () => {
 		<>
 			<div className="h-[77px] w-full flex justify-between items-center bg-white px-5 border-b border-[#D6DBE1]">
 				<p>your workspace</p>
-				<div className="bg-[#f2f2f2] rounded-[5px] flex items-center gap-3 px-3 py-2 w-[25%]">
+				<div className="bg-[#f2f2f2] rounded-[5px] flex items-center gap-3 px-3 w-[25%]">
 					<div className="w-10 h-10 flex items-center justify-center ">
 						<SearchIcon className=" text-brand-500" />
 					</div>
