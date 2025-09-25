@@ -179,6 +179,7 @@ const Sidebar = () => {
 						? "bg-[#F2F2F2] text-[#222020]"
 						: "hover:bg-[#F2F2F2]"
 				}`}
+				data-tour={`${item.name.toLowerCase()}-menu`}
 				onMouseEnter={() => !isMobile && setHoveredItem(item.name)}
 				onMouseLeave={() => !isMobile && setHoveredItem(null)}
 				onClick={() => {
@@ -236,12 +237,19 @@ const Sidebar = () => {
 	return (
 		<>
 			{/* Desktop Sidebar */}
-			<aside className="hidden lg:flex w-60 lg:w-64 xl:w-72 h-full p-4 border-r border-[#D6DBE1] bg-white flex-shrink-0 rounded-bl-2xl flex-col">
+			<aside
+				className="hidden lg:flex w-60 lg:w-64 xl:w-72 h-full p-4 border-r border-[#D6DBE1] bg-white flex-shrink-0 rounded-bl-2xl flex-col"
+				data-tour="sidebar"
+			>
 				<div className="min-h-[77px] flex items-center">
 					<Image src={Logo} alt="Logo" className="w-44 xl:w-[158px] h-auto" />
 				</div>
 				<div className="mt-1.5 flex-1 overflow-y-auto scrollbar-hide">
-					{navItems.map((item) => renderMenuItem(item, false))}
+					{navItems.map((item, index) => (
+						<div key={item.name} data-tour={getMenuTourId(item.name, index)}>
+							{renderMenuItem(item, false)}
+						</div>
+					))}
 				</div>
 			</aside>
 
@@ -261,6 +269,19 @@ const Sidebar = () => {
 			)}
 		</>
 	);
+
+	// Helper function to generate tour IDs for menu items
+	function getMenuTourId(itemName: string, index: number): string {
+		const tourIds: { [key: string]: string } = {
+			Recents: "recents-menu",
+			Contacts: "contacts-menu",
+			Calendar: "calendar-menu",
+			MelpDrive: "drive-menu",
+			Apps: "apps-menu",
+			Assistant: "assistant-menu",
+		};
+		return tourIds[itemName] || `menu-item-${index}`;
+	}
 };
 
 export default Sidebar;

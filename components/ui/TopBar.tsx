@@ -91,7 +91,10 @@ const TopBar = () => {
 					</p>
 					<p className="text-sm font-medium sm:hidden">{getBreadcrumb()}</p>
 				</div>
-				<div className="bg-[#f2f2f2] rounded-[5px] flex items-center gap-1 sm:gap-2 md:gap-3 px-2 sm:px-3 w-[40%] sm:w-[35%] md:w-[30%] lg:w-[25%]">
+				<div
+					className="bg-[#f2f2f2] rounded-[5px] flex items-center gap-1 sm:gap-2 md:gap-3 px-2 sm:px-3 w-[40%] sm:w-[35%] md:w-[30%] lg:w-[25%]"
+					data-tour="search-bar"
+				>
 					<div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
 						<SearchIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand-500" />
 					</div>
@@ -111,10 +114,16 @@ const TopBar = () => {
 					</div>
 				</div>
 				<div className="flex items-center h-full gap-1 sm:gap-2 md:gap-3 lg:gap-5">
-					<button className="bg-[#9c9696] hover:bg-[#EE4136] px-2 sm:px-3 md:px-3.5 py-1 sm:py-1.5 rounded-[2px] text-white cursor-pointer transition-colors duration-200 text-xs sm:text-sm font-medium">
+					<button
+						className="bg-[#9c9696] hover:bg-[#EE4136] px-2 sm:px-3 md:px-3.5 py-1 sm:py-1.5 rounded-[2px] text-white cursor-pointer transition-colors duration-200 text-xs sm:text-sm font-medium"
+						data-tour="live-calls"
+					>
 						LIVE CALLS
 					</button>
-					<div className="h-full flex justify-center items-center">
+					<div
+						className="h-full flex justify-center items-center"
+						data-tour="topbar-actions"
+					>
 						{topbarItem.map((item) => (
 							<div
 								key={item.name}
