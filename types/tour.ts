@@ -6,7 +6,7 @@ export interface TourStep {
 	placement: "top" | "bottom" | "left" | "right";
 	action?: {
 		type: "click" | "navigate";
-		payload?: any;
+		payload?: Record<string, unknown>;
 	};
 	isSkippable?: boolean;
 }

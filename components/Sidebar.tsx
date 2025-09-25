@@ -3,7 +3,16 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useDashboard } from "./DashboardContext";
+import { DashboardView } from "./dashboardConfig";
 import Logo from "@/public/logo.svg";
+
+interface NavItem {
+	name: string;
+	displayName: string;
+	iconStroke: string;
+	iconFilled: string;
+	submenu: string[];
+}
 import dashboardIcon from "@/public/icons/dashboard.svg";
 import dashboardIconFilled from "@/public/icons/dashboard-filled.svg";
 import recentIcon from "@/public/icons/recents.svg";
@@ -143,7 +152,7 @@ const Sidebar = () => {
 					setCurrentView("Dashboard");
 				} else {
 					setExpandedMenu(itemName);
-					setCurrentView(itemName as any);
+					setCurrentView(itemName as DashboardView);
 				}
 			} else {
 				// Recents, Network: Only toggle submenu, no content change
@@ -151,13 +160,13 @@ const Sidebar = () => {
 			}
 		} else {
 			// Items without submenus: Change content and close any expanded menu
-			setCurrentView(itemName as any);
+			setCurrentView(itemName as DashboardView);
 			setExpandedMenu(null);
 		}
 	};
 
 	const handleSubmenuClick = (subItem: string) => {
-		setCurrentView(subItem as any);
+		setCurrentView(subItem as DashboardView);
 		if (isMobileMenuOpen) {
 			setIsMobileMenuOpen(false);
 		}
@@ -168,10 +177,10 @@ const Sidebar = () => {
 		if (currentView === itemName) return true;
 
 		const item = navItems.find((nav) => nav.name === itemName);
-		return item?.submenu.includes(currentView as any) || false;
+		return item?.submenu.includes(currentView as DashboardView) || false;
 	};
 
-	const renderMenuItem = (item: any, isMobile = false) => (
+	const renderMenuItem = (item: NavItem, isMobile = false) => (
 		<div key={item.name}>
 			<div
 				className={`flex items-center p-2 cursor-pointer rounded-[4px] mb-[6px] transition-all duration-200 ease-in-out ${

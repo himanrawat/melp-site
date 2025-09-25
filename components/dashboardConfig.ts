@@ -1,4 +1,5 @@
 import Dashboard from "@/public/dashboard.png";
+import { StaticImageData } from "next/image";
 
 export type DashboardView =
 	| "Dashboard"
@@ -24,7 +25,7 @@ export interface DashboardViewConfig {
 	name: DashboardView;
 	title: string;
 	description: string;
-	image: any; // StaticImageData from next/image
+	image: StaticImageData;
 }
 
 export const dashboardViews: Record<DashboardView, DashboardViewConfig> = {

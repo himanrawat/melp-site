@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
-import { useTour } from "./TourContext";
 import { TourStep } from "@/types/tour";
 
 interface TooltipProps {

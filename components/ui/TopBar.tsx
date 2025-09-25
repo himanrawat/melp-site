@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { Calendar, SearchIcon } from "lucide-react";
+import React from "react";
+import { SearchIcon } from "lucide-react";
 import dayNight from "@/public/day-night.svg";
 import Image from "next/image";
 import Notification from "@/public/icons/notification.svg";

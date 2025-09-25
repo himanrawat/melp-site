@@ -32,6 +32,18 @@ export const TourProvider: React.FC<TourProviderProps> = ({ children }) => {
 		}
 	}, []);
 
+	const completeTour = useCallback(() => {
+		if (currentTour) {
+			if (typeof window !== "undefined") {
+				sessionStorage.setItem(`tour-${currentTour.id}-completed`, "true");
+			}
+			currentTour.onComplete?.();
+		}
+		setIsActive(false);
+		setCurrentTour(null);
+		setCurrentStepIndex(0);
+	}, [currentTour]);
+
 	const nextStep = useCallback(() => {
 		if (!currentTour) return;
 
@@ -40,7 +52,7 @@ export const TourProvider: React.FC<TourProviderProps> = ({ children }) => {
 		} else {
 			completeTour();
 		}
-	}, [currentStepIndex, currentTour]);
+	}, [currentStepIndex, currentTour, completeTour]);
 
 	const prevStep = useCallback(() => {
 		if (currentStepIndex > 0) {
@@ -54,18 +66,6 @@ export const TourProvider: React.FC<TourProviderProps> = ({ children }) => {
 				sessionStorage.setItem(`tour-${currentTour.id}-skipped`, "true");
 			}
 			currentTour.onSkip?.();
-		}
-		setIsActive(false);
-		setCurrentTour(null);
-		setCurrentStepIndex(0);
-	}, [currentTour]);
-
-	const completeTour = useCallback(() => {
-		if (currentTour) {
-			if (typeof window !== "undefined") {
-				sessionStorage.setItem(`tour-${currentTour.id}-completed`, "true");
-			}
-			currentTour.onComplete?.();
 		}
 		setIsActive(false);
 		setCurrentTour(null);
