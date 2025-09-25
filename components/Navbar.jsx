@@ -157,9 +157,9 @@ const Navbar = () => {
 						: ""
 				}`}
 				style={{
-					backdropFilter: scrolled ? "" : "blur(16px) saturate(120%)",
+					backdropFilter: scrolled ? "blur(8px) saturate(120%)" : "blur(16px) saturate(120%)",
 					background: scrolled 
-						? "rgba(255, 255, 255, 0.85)" 
+						? "rgba(255, 255, 255, 0.6)" 
 						: "rgba(255, 255, 255, 0.15)",
 				}}
 			>
