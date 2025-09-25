@@ -26,9 +26,9 @@ export const TourProvider: React.FC<TourProviderProps> = ({ children }) => {
 		setCurrentTour(tourConfig);
 		setCurrentStepIndex(0);
 		setIsActive(true);
-		// Store in localStorage to remember tour completion
+		// Store in sessionStorage to remember tour completion for current session
 		if (typeof window !== "undefined") {
-			localStorage.setItem(`tour-${tourConfig.id}-started`, "true");
+			sessionStorage.setItem(`tour-${tourConfig.id}-started`, "true");
 		}
 	}, []);
 
@@ -51,7 +51,7 @@ export const TourProvider: React.FC<TourProviderProps> = ({ children }) => {
 	const skipTour = useCallback(() => {
 		if (currentTour) {
 			if (typeof window !== "undefined") {
-				localStorage.setItem(`tour-${currentTour.id}-skipped`, "true");
+				sessionStorage.setItem(`tour-${currentTour.id}-skipped`, "true");
 			}
 			currentTour.onSkip?.();
 		}
@@ -63,7 +63,7 @@ export const TourProvider: React.FC<TourProviderProps> = ({ children }) => {
 	const completeTour = useCallback(() => {
 		if (currentTour) {
 			if (typeof window !== "undefined") {
-				localStorage.setItem(`tour-${currentTour.id}-completed`, "true");
+				sessionStorage.setItem(`tour-${currentTour.id}-completed`, "true");
 			}
 			currentTour.onComplete?.();
 		}

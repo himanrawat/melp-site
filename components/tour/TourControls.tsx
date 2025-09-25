@@ -18,9 +18,9 @@ const TourControls: React.FC<TourControlsProps> = ({ className = "" }) => {
 		setIsClient(true);
 		if (typeof window !== "undefined") {
 			const hasCompletedTour =
-				localStorage.getItem(`tour-${dashboardTour.id}-completed`) === "true";
+				sessionStorage.getItem(`tour-${dashboardTour.id}-completed`) === "true";
 			const hasSkippedTour =
-				localStorage.getItem(`tour-${dashboardTour.id}-skipped`) === "true";
+				sessionStorage.getItem(`tour-${dashboardTour.id}-skipped`) === "true";
 			setHasTourHistory(hasCompletedTour || hasSkippedTour);
 		}
 	}, []);

@@ -1,10 +1,11 @@
-import DashboardSection from "./DashboardSection";
-import Sidebar from "./Sidebar";
-import { DashboardProvider } from "./DashboardContext";
-import { TourProvider } from "./tour/TourContext";
-import TourOverlay from "./tour/TourOverlay";
-import AutoStartTour from "./tour/AutoStartTour";
-import TourKeyboardShortcuts from "./tour/TourKeyboardShortcuts";
+import DashboardSection from "@/components/DashboardSection";
+import Sidebar from "@/components/Sidebar";
+import { DashboardProvider } from "@/components/DashboardContext";
+import { TourProvider } from "@/components/tour/TourContext";
+import TourOverlay from "@/components/tour/TourOverlay";
+import AutoStartTour from "@/components/tour/AutoStartTour";
+import TourKeyboardShortcuts from "@/components/tour/TourKeyboardShortcuts";
+import RestartTourLink from "@/components/tour/RestartTourLink";
 
 const Dashboard = () => {
 	return (
@@ -21,6 +22,11 @@ const Dashboard = () => {
 							<TourOverlay />
 							<AutoStartTour />
 							<TourKeyboardShortcuts />
+						</div>
+
+						{/* Restart Tour Link - Right aligned with supporting text */}
+						<div className="mt-4 flex justify-end">
+							<RestartTourLink />
 						</div>
 					</TourProvider>
 				</DashboardProvider>

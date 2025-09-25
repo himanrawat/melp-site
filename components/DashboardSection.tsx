@@ -4,7 +4,6 @@ import TopBar from "./ui/TopBar";
 import Image from "next/image";
 import { useDashboard } from "./DashboardContext";
 import { dashboardViews } from "./dashboardConfig";
-import TourControls from "./tour/TourControls";
 
 const DashboardSection = () => {
 	const { currentView } = useDashboard();
@@ -21,10 +20,6 @@ const DashboardSection = () => {
 						alt={`${currentDashboard.title} Dashboard`}
 						className="w-full h-auto rounded-br-2xl"
 					/>
-					{/* Tour Controls - positioned absolutely over the dashboard image */}
-					<div className="absolute top-4 right-4">
-						<TourControls />
-					</div>
 				</div>
 			);
 		}
@@ -33,10 +28,6 @@ const DashboardSection = () => {
 			<div className="h-full relative">
 				<p>{`${currentDashboard.title}`}</p>
 				<p>{`${currentDashboard.description}`}</p>
-				{/* Tour Controls for other views */}
-				<div className="absolute top-4 right-4">
-					<TourControls />
-				</div>
 			</div>
 		);
 	};
