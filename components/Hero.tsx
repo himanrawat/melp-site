@@ -162,10 +162,10 @@ const Hero = () => {
 					className="text-center mb-4 sm:mb-6 animate-slideUp"
 					style={{ animationDelay: "1000ms" }}
 				>
-					<div className="inline-flex items-center gap-2 bg-brand-50 text-brand-700 px-4 py-2 rounded-full text-sm font-medium border border-brand-200">
-						<span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse-subtle" />
-						Interactive Preview • Click sidebar to explore features
-					</div>
+				<div className="inline-flex items-center gap-2 bg-brand-50 text-brand-700 px-4 py-2 rounded-full text-sm font-medium border border-brand-200">
+					<span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse-subtle"></span>
+					<span>Interactive Preview • Click sidebar to explore features</span>
+				</div>
 				</div>
 			</div>
 		</section>
