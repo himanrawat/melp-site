@@ -27,7 +27,7 @@ export default function Home() {
 			<FAQ />
 			<TryForFree />
 			<Footer />
-			<LocationTester onLocationChange={() => {}} />
+			{/* <LocationTester onLocationChange={() => {}} /> */}
 		</>
 	);
 }
