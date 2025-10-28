@@ -42,10 +42,6 @@ export function HeroTextFlip({
 					return width;
 				});
 				setWordWidths(widths);
-				console.log(
-					"📏 Measured widths:",
-					widths.map((w, i) => `${words[i]}: ${w}px`)
-				);
 			}
 		};
 
@@ -69,7 +65,7 @@ export function HeroTextFlip({
 			{/* Hidden span for measuring text width */}
 			<span
 				ref={measureRef}
-				className="absolute invisible text-brand-500 font-bold"
+				className="absolute invisible font-bold"
 				style={{ fontSize: "inherit" }}
 				aria-hidden="true"
 			/>
@@ -85,13 +81,6 @@ export function HeroTextFlip({
 				transition={{
 					duration: animationDuration / 1000,
 					ease: "easeInOut",
-				}}
-				onAnimationStart={() => {
-					console.log(
-						`🎬 Width animating to: ${
-							wordWidths[currentWordIndex] || "fallback"
-						}px for "${words[currentWordIndex]}"`
-					);
 				}}
 			>
 				<motion.span
@@ -114,7 +103,7 @@ export function HeroTextFlip({
 					}}
 					className={cn("inline-block whitespace-nowrap", textClassName)}
 				>
-					<span className="text-brand-500">
+					<span className="text-neutral-900">
 						{words[currentWordIndex].split("").map((letter, index) => (
 							<motion.span
 								key={`${words[currentWordIndex]}-${index}`}
