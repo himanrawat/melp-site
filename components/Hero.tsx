@@ -6,8 +6,8 @@ import { HeroTextFlip } from "./ui/HeroTextFlip";
 
 const Hero = () => {
 	return (
-		<section className="relative bg-gradient-to-br from-neutral-50 via-white to-neutral-100 px-4 sm:px-6 lg:px-8">
-			<div className="max-w-7xl mx-auto pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-12 lg:pb-16">
+		<section className="relative px-4 sm:px-6 lg:px-8">
+			<div className="max-w-7xl mx-auto pt-12 sm:pt-16 lg:pt-20 pb-2">
 				{/* Hero Content */}
 				<div className="text-center mb-8 sm:mb-12 lg:mb-16">
 					{/* Main Heading */}
@@ -61,12 +61,12 @@ const Hero = () => {
 						className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-slideUp"
 						style={{ animationDelay: "600ms" }}
 					>
-						<button className="group bg-brand-500 hover:bg-brand-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-lg hover:shadow-brand-500/25 hover:-translate-y-1 flex items-center gap-2 w-full sm:w-auto justify-center">
+						<button className="group bg-brand-500 hover:bg-brand-600 text-white px-4 sm:px-4 py-3 sm:py-4 rounded-lg font-semibold text-md transition-all duration-300 hover:shadow-lg hover:shadow-brand-500/25 hover:-translate-y-1 flex items-center gap-2 w-full sm:w-auto justify-center">
 							Start Free Trial
 							<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
 						</button>
 
-						<button className="group bg-white hover:bg-neutral-50 text-neutral-700 hover:text-neutral-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg border border-neutral-300 hover:border-neutral-400 transition-all duration-300 hover:shadow-md hover:-translate-y-1 flex items-center gap-2 w-full sm:w-auto justify-center">
+						<button className="group bg-white hover:bg-neutral-50 text-neutral-700 hover:text-neutral-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-md border border-neutral-300 hover:border-neutral-400 transition-all duration-300 hover:shadow-md hover:-translate-y-1 flex items-center gap-2 w-full sm:w-auto justify-center">
 							<Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
 							Watch Demo
 						</button>

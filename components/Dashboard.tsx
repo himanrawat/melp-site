@@ -9,7 +9,7 @@ import RestartTourLink from "@/components/tour/RestartTourLink";
 
 const Dashboard = () => {
 	return (
-		<section className="bg-gradient-to-br from-neutral-50 via-white to-neutral-100 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
+		<section className="px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
 			<div className="max-w-7xl mx-auto flex justify-center items-center min-h-[80vh] flex-col">
 				<DashboardProvider>
 					<TourProvider>
