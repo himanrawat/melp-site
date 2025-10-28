@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { CalendarRange } from "lucide-react";
+import Image from "next/image";
 
 interface ProductCard {
 	icon: React.ReactNode;
@@ -59,9 +60,11 @@ export default function TryForFree() {
 			buttonVariant: "primary",
 			image: (
 				<div className="relative h-48 overflow-hidden flex items-center justify-center p-4">
-					<img
+					<Image
 						src="https://www.melp.us/images/melpQrCode.png"
 						alt="MELP QR Code"
+						width={192}
+						height={192}
 						className="h-full w-auto object-contain"
 					/>
 				</div>
@@ -215,9 +218,11 @@ export default function TryForFree() {
 									{/* Icon */}
 									<div className="text-neutral-900 mb-4">
 										{typeof product.icon === "string" ? (
-											<img
+											<Image
 												src={product.icon}
 												alt={product.title}
+												width={128}
+												height={40}
 												className="w-32"
 											/>
 										) : (

@@ -53,7 +53,10 @@ const Hero = () => {
 		}
 
 		// Map trending keywords to features
-		const featureMap: Record<string, { icon: any; text: string }[]> = {
+		const featureMap: Record<
+			string,
+			{ icon: React.ComponentType<{ className?: string }>; text: string }[]
+		> = {
 			US: [
 				{ icon: Video, text: "Enterprise Video Conferencing" },
 				{ icon: MessageSquare, text: "HIPAA Compliant Messaging" },

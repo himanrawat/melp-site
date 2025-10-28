@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useId, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -27,7 +27,6 @@ export function HeroTextFlip({
 	animationDuration = 700,
 	constantWord = "Together",
 }: Readonly<HeroTextFlipProps>) {
-	const id = useId();
 	const [currentWordIndex, setCurrentWordIndex] = useState(0);
 	const [wordWidths, setWordWidths] = useState<number[]>([]);
 	const measureRef = useRef<HTMLSpanElement>(null);

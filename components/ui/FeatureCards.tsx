@@ -1,17 +1,11 @@
 "use client";
 import React from "react";
-
-interface Section {
-	id: string;
-	title: string;
-	description: string;
-}
+import Image from "next/image";
 
 interface FeatureCardsProps {
 	badge?: string;
 	heading: string;
 	subheading?: string;
-	sections?: Section[];
 	image: string;
 }
 
@@ -19,7 +13,6 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({
 	badge,
 	heading,
 	subheading,
-	sections,
 	image,
 }) => {
 	return (
@@ -57,9 +50,11 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({
 
 				{/* Image Display */}
 				<div className="w-full max-h-[400px] flex items-center justify-center overflow-hidden rounded-2xl">
-					<img
+					<Image
 						src={image}
 						alt={heading}
+						width={800}
+						height={400}
 						className="w-full h-full max-h-[400px] rounded-2xl object-contain"
 					/>
 				</div>
