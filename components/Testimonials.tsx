@@ -192,14 +192,14 @@ export default function Testimonials() {
 							key={`company-${index}-${testimonial.company}`}
 							className="bg-white rounded-xl p-6 border border-neutral-200 hover:shadow-md transition-shadow cursor-pointer"
 						>
-						<h4 className="text-lg font-bold text-neutral-900 mb-3">
-							{testimonial.company}
-						</h4>
-						<p className="text-neutral-700 text-sm leading-relaxed">
-							{testimonial.quote
-								.replaceAll('"', "&quot;")
-								.replaceAll("'", "&apos;")}
-						</p>
+							<h4 className="text-lg font-bold text-neutral-900 mb-3">
+								{testimonial.company}
+							</h4>
+							<p className="text-neutral-700 text-sm leading-relaxed">
+								{testimonial.quote
+									.replaceAll('"', "&quot;")
+									.replaceAll("'", "&apos;")}
+							</p>
 						</div>
 					))}
 				</div>
