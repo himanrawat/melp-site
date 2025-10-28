@@ -37,17 +37,16 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({
 
 				<div className="flex justify-between items-center">
 					<div>
-						{/* Main Heading */}
-						<h3 className="text-3xl md:text-2xl font-bold text-neutral-900 leading-tight mb-2">
-							{heading}
-						</h3>
-
 						{/* Subheading */}
 						{subheading && (
-							<p className="text-sm font-semibold text-neutral-900 mb-4">
+							<p className="text-sm font-semibold text-neutral-900">
 								{subheading}
 							</p>
 						)}
+						{/* Main Heading */}
+						<h3 className="text-3xl md:text-2xl font-bold text-neutral-900 leading-tight mb-4">
+							{heading}
+						</h3>
 					</div>
 
 					{/* Icon Button */}
@@ -57,11 +56,11 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({
 				</div>
 
 				{/* Image Display */}
-				<div className="w-full">
+				<div className="w-full max-h-[400px] flex items-center justify-center overflow-hidden rounded-2xl">
 					<img
 						src={image}
 						alt={heading}
-						className="w-full h-auto rounded-2xl object-cover"
+						className="w-full h-full max-h-[400px] rounded-2xl object-contain"
 					/>
 				</div>
 			</div>

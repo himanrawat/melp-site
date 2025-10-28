@@ -20,14 +20,14 @@ const IntroducingMELPAPP = () => {
 				<Carousel />
 				<section className="mt-16 flex justify-center items-center gap-8">
 					<FeatureCards
-						heading="Search for everything"
-						subheading="Enterprise search"
-						image="/test1.avif"
+						subheading="Secure File Storage"
+						heading="Store and access files anywhere, anytime"
+						image="/drive.png"
 					/>
 					<FeatureCards
-						heading="Search for everything"
-						subheading="Enterprise search"
-						image="/test1.avif"
+						subheading="Connect & Grow"
+						heading="Discover and connect with new people"
+						image="/network.png"
 					/>
 				</section>
 			</div>

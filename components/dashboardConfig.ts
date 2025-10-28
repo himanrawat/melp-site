@@ -36,7 +36,7 @@ export const dashboardViews: Record<DashboardView, DashboardViewConfig> = {
 		description:
 			"Overview of your workspace with key metrics and recent activity",
 		image: Dashboard,
-		video: "/video-test.mp4", // Add your video file path here
+		video: "/dashboard.mp4",
 	},
 	Recents: {
 		name: "Recents",
