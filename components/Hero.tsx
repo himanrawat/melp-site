@@ -11,7 +11,7 @@ const Hero = () => {
 				{/* Hero Content */}
 				<div className="text-center mb-8 sm:mb-12 lg:mb-16">
 					{/* Main Heading */}
-					<h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-neutral-900 mb-4 sm:mb-6 lg:mb-8 animate-slideUp">
+					<h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-neutral-500 mb-4 sm:mb-6 lg:mb-8 animate-slideUp">
 						<HeroTextFlip
 							words={["Collaborate", "Create", "Communicate"]}
 							constantWord="Together"

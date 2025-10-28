@@ -10,11 +10,14 @@ import RestartTourLink from "@/components/tour/RestartTourLink";
 const Dashboard = () => {
 	return (
 		<section className="bg-gradient-to-br from-neutral-50 via-white to-neutral-100 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
-			<div className="max-w-7xl mx-auto">
+			<div className="max-w-7xl mx-auto flex justify-center items-center min-h-[80vh] flex-col">
 				<DashboardProvider>
 					<TourProvider>
 						<div
-							className="relative flex h-[80vh] w-full bg-white rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden animate-slideUp hero-glow delay-1200"
+							className="relative flex bg-white rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden animate-slideUp hero-glow delay-1200 
+							w-[350px] h-[400px] 
+							sm:w-[600px] sm:h-[450px] 
+							lg:w-[1198px] lg:h-[680px]"
 							data-tour="dashboard-main"
 						>
 							<Sidebar />

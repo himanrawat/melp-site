@@ -26,6 +26,7 @@ export interface DashboardViewConfig {
 	title: string;
 	description: string;
 	image: StaticImageData;
+	video?: string; // Optional video source
 }
 
 export const dashboardViews: Record<DashboardView, DashboardViewConfig> = {
@@ -35,6 +36,7 @@ export const dashboardViews: Record<DashboardView, DashboardViewConfig> = {
 		description:
 			"Overview of your workspace with key metrics and recent activity",
 		image: Dashboard,
+		video: "/video-test.mp4", // Add your video file path here
 	},
 	Recents: {
 		name: "Recents",
